@@ -1,2 +1,6 @@
 ---
 os: IOS
+ansible_become: true
+ansible_become_method: enable
+ansible_connection: network_cli
+ansible_network_os: ios
