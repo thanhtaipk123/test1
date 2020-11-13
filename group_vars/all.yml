@@ -1,7 +1,2 @@
 ---
 os: IOS
-ansible_become: yes
-ansible_become_method: enable
-ansible_network_os: cisco.ios.ios
-ansible_user: my_ios_user
-ansible_password: my_ios_password
