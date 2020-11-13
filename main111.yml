@@ -2,6 +2,7 @@
   - name: Initial Playbook
     hosts: all
     gather_facts: no
+    connection: network_cli
     tasks:
       - name: run the command 'show version'
         ios_command:
