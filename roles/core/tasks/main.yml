@@ -1,19 +1,11 @@
 ---
-- hosts: all
-  gather_facts: no
-  connection: local
-  tasks:
-    - name: show old hostname
-      ios_command:
-        commands: show running-config | include hostname
-    
-    - name: Configure change hostname Device
-      ios_config:
-        lines: hostname {{ new_hostname }}
-
-    - name: show new hostname
-      ios_command:
-        commands: show running-config | include hostname
-      register: new_host
-    
-    - debug: msg="{{ new_host.stdout }}"
+  - name: Initial Playbook
+    hosts: all
+    gather_facts: no
+    tasks:
+      - name: Display Hostname
+        debug:
+          msg: "Router name is {{ hostname }}"
+      - name: Display OS
+        debug:
+          msg: "{{ hostname }} is running {{ os }}"
