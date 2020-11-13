@@ -2,7 +2,6 @@
   - name: Initial Playbook
     hosts: all
     gather_facts: no
-    ansible_connection: network_cli
     tasks:
       - name: Display Hostname
         debug:
