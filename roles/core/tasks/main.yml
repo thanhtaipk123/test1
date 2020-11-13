@@ -6,4 +6,4 @@
     tasks:
       - name: run the command 'show version'
         ios_command:
-          commands: show version
+        commands: show version
