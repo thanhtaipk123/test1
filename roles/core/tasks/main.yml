@@ -3,6 +3,6 @@
     hosts: all
     gather_facts: no
     tasks:
-      - name: run the command 'show version'
-        ios_command:
-        commands: show version
+      - name: Display Hostname
+        debug:
+          msg: "Router name is R1"
