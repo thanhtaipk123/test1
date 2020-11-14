@@ -7,4 +7,22 @@
       - name: run the command 'show version'
         ios_command:
           commands: show version
-        provider: "{{ cli }}"
+          provider: "{{ cli }}"
+      - name: Save config
+        ios_command:
+          commands:
+            - write
+          provider: "{{ cli }}"
+        when: cfg.changed
+
+
+
+      - name: show ntp
+        ios_command:
+          commands:
+                - show clock
+                - show ntp status
+                - show ntp associations
+                - show version
+          provider: "{{ cli }}"
+        register: out
