@@ -3,6 +3,6 @@ cli:
   host: "{{ inventory_hostname }}"
   username: "root"
   password: "Qwerty123"
-  transport: cli
+  #transport: cli
   authorize: yes
   auth_pass: "Qwerty123"
