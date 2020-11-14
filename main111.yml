@@ -5,6 +5,6 @@
     connection: network_cli
     tasks:
       - name: run the command 'show version'
-        provider: "{{ cli }}"
         ios_command:
           commands: show version
+        provider: "{{ cli }}"
