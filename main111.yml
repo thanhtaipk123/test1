@@ -4,25 +4,10 @@
     gather_facts: no
     connection: local
     tasks:
-      - name: run the command 'show version'
+      - name: run sh ip int br
         ios_command:
-          commands: show version
-          provider: "{{ cli }}"
-      - name: Save config
-        ios_command:
-          commands:
-            - write
-          provider: "{{ cli }}"
-        when: cfg.changed
-
-
-
-      - name: show ntp
-        ios_command:
-          commands:
-                - show clock
-                - show ntp status
-                - show ntp associations
-                - show version
-          provider: "{{ cli }}"
-        register: out
+          commands: show ip int br
+        register: sh_ip_int_br_result
+      - name: Debug registered var
+        debug: var=sh_ip_int_br_result.stdout_lines
+          
