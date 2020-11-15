@@ -2,7 +2,7 @@
   - name: Initial Playbook
     hosts: all
     gather_facts: no
-    connection: local
+    connection: network_cli
     tasks:
       - name: run sh ip int br
         ios_command:
