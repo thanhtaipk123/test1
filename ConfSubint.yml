@@ -9,7 +9,8 @@
           - interface Ethernet0/1.101
         lines:
           - encapsulation dot1Q 3
-          - ip address 10.100.101.253 255.255.255.0
+          - ip address 180.100.101.253 255.255.255.0
+          - description rogi da nogi
         after:
           - no shutdown
           - end
