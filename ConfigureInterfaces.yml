@@ -16,4 +16,4 @@
         - name: "Ethernet0/1.101"
           ipv4:
           - address: 10.100.101.253/24
-    state: replaced
+      state: replaced
