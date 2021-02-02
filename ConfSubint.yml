@@ -9,6 +9,7 @@
           - interface Ethernet0/1.101
         lines:
           - ip address 10.100.101.253 255.255.255.0
+        after:
           - no shutdown
       register: show_result
 
