@@ -1,1 +1,10 @@
-
+- name: Initial Playbook
+    hosts: all
+    gather_facts: no
+    connection: network_cli
+    tasks:
+      - name: "Configure NTP"
+        ios_ntp:
+          server: "{{ ntp_server }}"
+          logging: true
+          state: present
