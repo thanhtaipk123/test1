@@ -1,7 +1,7 @@
 - name: Initial Playbook
-    hosts: all
-    gather_facts: no
-    connection: network_cli
+  hosts: all
+  gather_facts: no
+  connection: network_cli
     tasks:
       - name: "Configure NTP"
         ios_ntp:
