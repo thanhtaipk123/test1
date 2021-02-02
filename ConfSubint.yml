@@ -14,6 +14,7 @@
         after:
           - end
           - write
+        backup: yes
       register: show_result
 
     - name: Debug registered var
