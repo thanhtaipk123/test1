@@ -6,11 +6,13 @@
     - name: Configure L3 Interface
       ios_config:
         parents:
-          - interface Ethernet0/1.101
+          - interface Ethernet0/1
         lines:
           - ip address 10.100.101.253 255.255.255.0
         after:
           - no shutdown
+          - end
+          - write
       register: show_result
 
     - name: Debug registered var
