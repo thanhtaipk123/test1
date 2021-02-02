@@ -7,5 +7,7 @@
       ios_l3_interfaces:
         config:
           - name: "Ethernet0/1.101"
+            description: roga i kopyta
+            enabled: true
             ipv4:
-              - address: 10.100.101.253/24
+            - address: 10.100.101.253/24
