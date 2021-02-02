@@ -3,9 +3,9 @@
   gather_facts: no
   connection: network_cli
   tasks:
-    - name: "Ethernet0/1.101"
-      interface:
-        - ios_if:
-          desc: "To netsvr"
-          enabled: true
-          ipv4: "10.100.101.253/24"
+    - name: Configure L3 Interface
+      ios_l3_interfaces:
+        config:
+          - name: "Ethernet0/1.101"
+            ipv4:
+              - address: 10.100.101.253/24
