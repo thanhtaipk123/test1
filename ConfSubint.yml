@@ -4,8 +4,8 @@
   connection: network_cli
   tasks:
     - name: Configure L3 Interface
-      ios_command:
-        commands:
+      ios_config:
+        lines:
           - configure terminal
           - interface Ethernet0/1.101
           - ip address 10.100.101.253 255.255.255.0
